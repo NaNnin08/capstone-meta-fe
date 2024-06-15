@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+:root {
+  --primary_one: #495e57;
+  --primary_two: #f4ce14;
+  --secondary_text: #333333;
+  --secondary_one: #ee9972;
+  --secondary_two: #fbdabb;
+  --secondary_three: #edefee;
+  --font_karla: "Karla";
+  --font_markazi: "Markazi";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
   min-height: 100vh;
+  width: 100%;
+}
+
+/* navbar */
+nav {
+  grid-area: header;
+  width: 100%;
+  height: 123px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font_karla);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 20px;
+  gap: 18px;
+  margin-left: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--secondary_text);
+  font-weight: bold;
+}
+
+main {
+  grid-area: main;
+}
+
+/* footer */
+footer {
+  grid-area: footer;
+  padding: 40px;
+  font-family: var(--font_karla);
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+footer h3 {
+  font-size: 20px;
+}
+
+footer ul {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 20px;
+  gap: 15px;
+  margin-left: 40px;
+  margin: 0;
+  padding: 0;
+  margin-top: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+footer ul li a {
+  text-decoration: none;
+  color: var(--secondary_text);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer ul li a.social {
+  text-decoration: none;
+  color: var(--secondary_text);
+  display: flex;
+  gap: 18px;
 }
+
+footer ul li a.social img {
+  width: 20px;
+  height: 20px;
+}
+
+footer .copy {
+  text-align: center;
+  margin-top: 80px;
+  border-top: 1px solid var(--secondary_text);
+  padding: 20px;
+}
+
