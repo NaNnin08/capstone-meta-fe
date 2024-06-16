@@ -8,7 +8,7 @@ import DeliveryIcon from "../assets/icons_assets/menu_delivery.png";
 
 const Menu = () => {
   return (
-    <div className="menu">
+    <div className="menu" id="menu">
       <div className="menu_title">
         <h1>This weeks specials!</h1>
 

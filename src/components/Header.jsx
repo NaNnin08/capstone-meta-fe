@@ -8,7 +8,9 @@ const Header = () => {
   return (
     <nav>
       <div className="icon_web">
-        <img src={HomeIcon} alt="icon home" />
+        <Link to="/">
+          <img src={HomeIcon} alt="icon home" />
+        </Link>
       </div>
       <ul>
         <li>
@@ -21,7 +23,7 @@ const Header = () => {
           <Link to="/#menu">Menu</Link>
         </li>
         <li>
-          <Link to="/#reservation">Reservation</Link>
+          <Link to="/#reserve">Reservation</Link>
         </li>
         <li>
           <Link to="/booking">Order Online</Link>

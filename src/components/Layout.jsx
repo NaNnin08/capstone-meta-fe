@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
+import ScrollToAnchor from "./ScrollAncor";
 
 const Layout = () => {
   return (
@@ -11,6 +12,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <Footer />
+      <ScrollToAnchor />
     </div>
   );
 };

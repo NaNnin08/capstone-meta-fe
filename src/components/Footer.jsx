@@ -6,6 +6,9 @@ import HomeIcon from "../assets/icons_assets/Logo.svg";
 import FacebookIcon from "../assets/icons_assets/facebook.png";
 import InstagramIcon from "../assets/icons_assets/instagram.png";
 import XIcon from "../assets/icons_assets/twitter.png";
+import AdressIcon from "../assets/icons_assets/location.png";
+import PhoneIcon from "../assets/icons_assets/phone.png";
+import EmailIcon from "../assets/icons_assets/mail.png";
 
 const Footer = () => {
   return (
@@ -28,7 +31,7 @@ const Footer = () => {
               <Link to="/#menu">Menu</Link>
             </li>
             <li>
-              <Link to="/#reservation">Reservation</Link>
+              <Link to="/#reserve">Reservation</Link>
             </li>
             <li>
               <Link to="/booking">Order Online</Link>
@@ -43,13 +46,38 @@ const Footer = () => {
           <h3>Contact</h3>
           <ul>
             <li>
-              <p>Adress</p>
+              <a
+                href="http://maps.google.com/?q=1234 Flavor Street, Chicago, IL 60657"
+                target="_blank"
+                rel="noreferrer"
+                className="social"
+              >
+                <img src={AdressIcon} alt="location" />{" "}
+                <p>
+                  1234 Flavor Street, <br />
+                  Chicago, IL 60657
+                </p>
+              </a>
             </li>
             <li>
-              <p>Phone Number</p>
+              <a
+                href={`tel:+3125551234`}
+                target="_blank"
+                rel="noreferrer"
+                className="social"
+              >
+                <img src={PhoneIcon} alt="phone" /> <p>(312) 555-1234</p>
+              </a>
             </li>
             <li>
-              <p>Email</p>
+              <a
+                href={`mailto:info@littlelemon.com`}
+                target="_blank"
+                rel="noreferrer"
+                className="social"
+              >
+                <img src={EmailIcon} alt="email" /> <p>info@littlelemon.com</p>
+              </a>
             </li>
           </ul>
         </section>
@@ -74,7 +102,7 @@ const Footer = () => {
                 rel="noreferrer"
                 className="social"
               >
-                <img src={InstagramIcon} alt="facebook" /> <p>Instagram</p>
+                <img src={InstagramIcon} alt="instagram" /> <p>Instagram</p>
               </a>
             </li>
             <li>
@@ -84,7 +112,7 @@ const Footer = () => {
                 rel="noreferrer"
                 className="social"
               >
-                <img src={XIcon} alt="facebook" /> <p>X/Twitter</p>
+                <img src={XIcon} alt="twitter/X" /> <p>X/Twitter</p>
               </a>
             </li>
           </ul>
