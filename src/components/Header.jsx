@@ -1,10 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 // image
 import HomeIcon from "../assets/icons_assets/Logo.svg";
 
 const Header = () => {
+  // state
+  const [isLogin, setIsLogin] = useState(false);
+
+  // router
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  //func
+  const onLogout = () => {
+    sessionStorage.removeItem("_user");
+
+    navigate("/");
+  };
+
+  // effect
+  useEffect(() => {
+    const session = sessionStorage.getItem("_user");
+    if (session) {
+      setIsLogin(true);
+      return;
+    }
+
+    setIsLogin(false);
+  }, [location]);
+
   return (
     <nav>
       <div className="icon_web">
@@ -29,7 +54,12 @@ const Header = () => {
           <Link to="/booking">Order Online</Link>
         </li>
         <li>
-          <Link to="#login">Login</Link>
+          <Link
+            to={isLogin ? "/" : "/login"}
+            onClick={isLogin ? onLogout : null}
+          >
+            {isLogin ? "Logout" : "Login"}
+          </Link>
         </li>
       </ul>
     </nav>
