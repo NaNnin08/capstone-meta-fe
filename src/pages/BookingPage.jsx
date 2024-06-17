@@ -67,7 +67,7 @@ const BookingPage = () => {
   return (
     <div className="booking">
       <div className="booking_title">
-        <h1>Booking Table</h1>
+        <h1>Book Now</h1>
         <h3>
           Please input your desired date, time, and the number of guests in your
           party to make a reservation.
